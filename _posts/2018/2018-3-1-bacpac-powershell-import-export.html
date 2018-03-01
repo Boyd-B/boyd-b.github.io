@@ -2,7 +2,7 @@
 layout: post
 title:  "Export and Import bacpac files with a simple powershell script"
 date:   2018-3-1 02:56
-categories: Powershell, SQL
+categories: Powershell SQL
 highlight: true
 image: http://4.bp.blogspot.com/-IOD6VutWGlA/UW8Jq05M0DI/AAAAAAAAAeA/OVckWFybKqg/s1600/DSC01317.JPG
 ---
@@ -14,7 +14,7 @@ This script uses an array of database names and creates bacpac files. Note that 
 for the sqlpackage as you may have a different version installed. The transcript portion of the script mirrors 
 the output of the script to a log file.
 
-{% highlight linenos %}
+{% highlight c# linenos %}
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
