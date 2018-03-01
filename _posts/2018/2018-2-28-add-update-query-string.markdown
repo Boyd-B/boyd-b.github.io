@@ -9,21 +9,25 @@ image: https://picsum.photos/400/400/?rnd=228
 
 Let's kick this blog off with a quick code snippet.
 
-        public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
-        {
-            Uri uri = new Uri(url);
-            var ub = new UriBuilder(uri);
-            NameValueCollection queryArgs = HttpUtility.ParseQueryString(uri.Query);
-            
-            foreach (KeyValuePair<string, string> keyValuePair in parameters)
-            {
-                queryArgs.Remove(keyValuePair.Key);
-                queryArgs.Add(keyValuePair.Key, keyValuePair.Value);
-            }
+{% highlight c# %}
 
-            ub.Query = queryArgs.ToString();
-            return ub.Uri.AbsoluteUri;
-        }
+public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
+{
+	Uri uri = new Uri(url);
+	var ub = new UriBuilder(uri);
+	NameValueCollection queryArgs = HttpUtility.ParseQueryString(uri.Query);
+	
+	foreach (KeyValuePair<string, string> keyValuePair in parameters)
+	{
+		queryArgs.Remove(keyValuePair.Key);
+		queryArgs.Add(keyValuePair.Key, keyValuePair.Value);
+	}
+
+	ub.Query = queryArgs.ToString();
+	return ub.Uri.AbsoluteUri;
+}
+
+{% endhighlight %}
 
 This code looks at the current query string and replaces any matching values with the new value, 
 or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
@@ -31,18 +35,18 @@ the value. Just keep adding new query string parameters.
 
 Yes, this was a real requirement.
 
-        private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
-        {
-            NameValueCollection queryArgs = HttpUtility.ParseQueryString(ub.Uri.Query);
-            if (queryArgs[argName] != null)
-            {
-                string argValue = queryArgs[argName];
-                queryArgs.Remove(argName);
-                ub.Query = queryArgs.ToString();
-                ub.Fragment = argName + "=" + argValue;
-            }
-            
-            return ub;
-        }
+private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
+{
+	NameValueCollection queryArgs = HttpUtility.ParseQueryString(ub.Uri.Query);
+	if (queryArgs[argName] != null)
+	{
+		string argValue = queryArgs[argName];
+		queryArgs.Remove(argName);
+		ub.Query = queryArgs.ToString();
+		ub.Fragment = argName + "=" + argValue;
+	}
+	
+	return ub;
+}
 		
 This method converts a query string paramater to a url fragment (or hash tag). This could be modified to add an anchor to a url.
