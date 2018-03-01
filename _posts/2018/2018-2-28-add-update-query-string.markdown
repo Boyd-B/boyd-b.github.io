@@ -7,7 +7,8 @@ highlight: true
 image: https://picsum.photos/400/400/?rnd=228
 ---
 
-Let's kick this blog off with a quick code snippet.
+This code looks at the current query string and replaces any matching values with the new value, 
+or appends the new parameter. 
 
 {% highlight c# %}
 
@@ -29,11 +30,10 @@ public static string UpdateQueryStringParameters(this string url, Dictionary<str
 
 {% endhighlight %}
 
-This code looks at the current query string and replaces any matching values with the new value, 
-or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
+If you want duplicate query string arguments, simply don't remove 
 the value. Just keep adding new query string parameters.
 
-## Change a query string parameter to fragment.
+### Change a query string parameter to fragment.
 
 Yes, this was a real requirement.
 
