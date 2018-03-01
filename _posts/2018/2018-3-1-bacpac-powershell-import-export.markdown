@@ -6,7 +6,7 @@ categories: Powershell SQL
 highlight: true
 image: https://picsum.photos/400/400/?rnd=31
 ---
-# Export or Import multiple databases as bacpac files using this powershell script
+## Export or Import multiple databases as bacpac files using this powershell script
 
 After trying various ways to copy a database from one server to another and failing 
 with weird and unhelpful errors, I decided to brush off an old powershell script.
