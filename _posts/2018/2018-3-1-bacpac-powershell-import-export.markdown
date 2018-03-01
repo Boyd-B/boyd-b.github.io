@@ -4,7 +4,7 @@ title:  "Export and Import bacpac files with a simple powershell script"
 date:   2018-3-1 02:56
 categories: Powershell SQL
 highlight: true
-image: https://loremflickr.com/400/400/lake,cloud,mountain?rnd=31
+image: https://loremflickr.com/400/400/mountain?rnd=31
 ---
 
 After trying various ways to copy a database from one server to another and failing 
