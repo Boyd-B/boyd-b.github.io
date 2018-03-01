@@ -33,7 +33,11 @@ This code looks at the current query string and replaces any matching values wit
 or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
 the value. Just keep adding new query string parameters.
 
+## Change a query string parameter to fragment.
+
 Yes, this was a real requirement.
+
+{% highlight c# %}
 
 private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
 {
@@ -48,5 +52,7 @@ private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argN
 	
 	return ub;
 }
-		
+
+{% endhighlight %}
+
 This method converts a query string paramater to a url fragment (or hash tag). This could be modified to add an anchor to a url.
