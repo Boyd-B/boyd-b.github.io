@@ -9,8 +9,6 @@ image: https://picsum.photos/400/400/?rnd=228
 
 Let's kick this blog off with a quick code snippet.
 
-{% highlight %}
-
         public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
         {
             Uri uri = new Uri(url);
@@ -26,16 +24,12 @@ Let's kick this blog off with a quick code snippet.
             ub.Query = queryArgs.ToString();
             return ub.Uri.AbsoluteUri;
         }
-		
-{% endhighlight %}
 
 This code looks at the current query string and replaces any matching values with the new value, 
 or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
 the value. Just keep adding new query string parameters.
 
 Yes, this was a real requirement.
-
-{% highlight %}
 
         private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
         {
@@ -51,6 +45,4 @@ Yes, this was a real requirement.
             return ub;
         }
 		
-{% endhighlight %}
-
 This method converts a query string paramater to a url fragment (or hash tag). This could be modified to add an anchor to a url.
