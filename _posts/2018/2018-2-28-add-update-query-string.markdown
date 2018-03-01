@@ -7,11 +7,9 @@ highlight: true
 image: https://picsum.photos/400/400/?rnd=228
 ---
 
-## Update query string parameters or add them if they don't exist
-
 Let's kick this blog off with a quick code snippet.
 
-{% highlight c# linenos %}
+{% highlight %}
 
         public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
         {
@@ -35,11 +33,9 @@ This code looks at the current query string and replaces any matching values wit
 or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
 the value. Just keep adding new query string parameters.
 
-### Bonus: move a query argument to a fragment
-
 Yes, this was a real requirement.
 
-{% highlight c# linenos %}
+{% highlight %}
 
         private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
         {
