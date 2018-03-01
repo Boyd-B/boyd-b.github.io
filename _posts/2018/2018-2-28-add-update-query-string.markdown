@@ -2,8 +2,7 @@
 layout: post
 title:  "Appending Query Parameters and Fragments in C#"
 date:   2018-2-28 04:34:20
-categories: c# .net
-highlight: true
+categories: csharp .net
 image: https://picsum.photos/400/400/?rnd=228
 ---
 
