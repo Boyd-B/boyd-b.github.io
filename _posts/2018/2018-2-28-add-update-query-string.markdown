@@ -4,7 +4,7 @@ title:  "Appending Query Parameters and Fragments in C#"
 date:   2018-2-28 04:34:20
 categories: c# .net
 highlight: true
-image: https://picsum.photos/400/400/
+image: https://picsum.photos/400/400/?rnd=228
 ---
 Let's kick this blog off with a quick code snippet.
 
