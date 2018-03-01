@@ -6,6 +6,9 @@ categories: c# .net
 highlight: true
 image: https://picsum.photos/400/400/?rnd=228
 ---
+
+# Update query string parameters or add them if they don't exist
+
 Let's kick this blog off with a quick code snippet.
 
 {% highlight cs linenos %}
@@ -28,7 +31,13 @@ Let's kick this blog off with a quick code snippet.
 		
 {% endhighlight %}
 
-The purpose of this method is to update a query string if it exists and adds it if it does not.
+This code looks at the current query string and replaces any matching values with the new value, 
+or appends the new parameter. If you want duplicate query string arguments, simply don't remove 
+the value. Just keep adding new query string parameters.
+
+### Bonus: move a query argument to a fragment
+
+Yes, this was a real requirement.
 
 {% highlight cs linenos %}
 

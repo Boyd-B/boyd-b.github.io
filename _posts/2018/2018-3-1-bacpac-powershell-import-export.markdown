@@ -50,6 +50,8 @@ foreach ($dbname in $dbs) {
 Stop-Transcript
 {% endhighlight %}
 
+### Deploy bacpacs to your server
+
 To import the bacpacs, we simply change the server it's going to (db's can't already exist)
 and change the sqlpackage command to the following line. Everything else remains the same.
 
