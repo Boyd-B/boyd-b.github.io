@@ -6,6 +6,7 @@ categories: Powershell SQL
 highlight: true
 image: https://picsum.photos/400/400/?rnd=31
 ---
+# Export or Import multiple databases as bacpac files using this powershell script
 
 After trying various ways to copy a database from one server to another and failing 
 with weird and unhelpful errors, I decided to brush off an old powershell script.
@@ -14,7 +15,7 @@ This script uses an array of database names and creates bacpac files. Note that 
 for the sqlpackage as you may have a different version installed. The transcript portion of the script mirrors 
 the output of the script to a log file.
 
-{% highlight c# linenos %}
+{% highlight cs linenos %}
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
@@ -52,6 +53,6 @@ Stop-Transcript
 To import the bacpacs, we simply change the server it's going to (db's can't already exist)
 and change the sqlpackage command to the following line. Everything else remains the same.
 
-{% highlight linenos %}
+{% highlight %}
 & $sqlpackage /a:Import /tsn:$server /tdn:$dbname /tu:$user /tp:$pass /sf:$dbfile
 {% endhighlight %}

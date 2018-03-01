@@ -8,7 +8,7 @@ image: https://picsum.photos/400/400/?rnd=228
 ---
 Let's kick this blog off with a quick code snippet.
 
-{% highlight c# linenos %}
+{% highlight cs linenos %}
 
         public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
         {
@@ -30,7 +30,7 @@ Let's kick this blog off with a quick code snippet.
 
 The purpose of this method is to update a query string if it exists and adds it if it does not.
 
-{% highlight c# linenos %}
+{% highlight cs linenos %}
 
         private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
         {
