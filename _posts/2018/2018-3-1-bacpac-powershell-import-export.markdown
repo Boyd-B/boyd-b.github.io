@@ -13,7 +13,7 @@ This script uses an array of database names and creates bacpac files. Note that 
 for the sqlpackage as you may have a different version installed. The transcript portion of the script mirrors 
 the output of the script to a log file.
 
-{% highlight ps1 linenos %}
+{% highlight c# linenos %}
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
