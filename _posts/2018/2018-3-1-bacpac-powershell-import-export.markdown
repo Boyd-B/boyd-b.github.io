@@ -6,6 +6,7 @@ categories: Powershell SQL
 highlight: true
 image: https://picsum.photos/400/400/?rnd=31
 ---
+
 After trying various ways to copy a database from one server to another and failing 
 with weird and unhelpful errors, I decided to brush off an old powershell script.
 
@@ -13,7 +14,8 @@ This script uses an array of database names and creates bacpac files. Note that 
 for the sqlpackage as you may have a different version installed. The transcript portion of the script mirrors 
 the output of the script to a log file.
 
-{% highlight c# linenos %}
+{% highlight %}
+
 $ErrorActionPreference="SilentlyContinue"
 Stop-Transcript | out-null
 $ErrorActionPreference = "Continue"
@@ -46,6 +48,7 @@ foreach ($dbname in $dbs) {
     "Finished " + $dbname + " @ $(get-date) Duration: $($elapsed.Elapsed.ToString())"
 }
 Stop-Transcript
+
 {% endhighlight %}
 
 ### Deploy bacpacs to your server
