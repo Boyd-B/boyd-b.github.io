@@ -7,7 +7,7 @@ highlight: true
 image: https://picsum.photos/400/400/?rnd=228
 ---
 
-# Update query string parameters or add them if they don't exist
+## Update query string parameters or add them if they don't exist
 
 Let's kick this blog off with a quick code snippet.
 
