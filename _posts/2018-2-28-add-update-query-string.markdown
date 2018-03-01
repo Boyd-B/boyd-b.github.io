@@ -2,7 +2,7 @@
 layout: post
 title:  "Appending Query Parameters and Fragments in C#"
 date:   2018-2-28 04:34:20
-categories: GDG
+categories: c# .net
 highlight: true
 image: http://4.bp.blogspot.com/-IOD6VutWGlA/UW8Jq05M0DI/AAAAAAAAAeA/OVckWFybKqg/s1600/DSC01317.JPG
 ---
