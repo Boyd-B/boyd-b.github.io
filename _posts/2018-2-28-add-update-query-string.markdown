@@ -4,7 +4,7 @@ title:  "Appending Query Parameters and Fragments in C#"
 date:   2018-2-28 04:34:20
 categories: c# .net
 highlight: true
-image: http://4.bp.blogspot.com/-IOD6VutWGlA/UW8Jq05M0DI/AAAAAAAAAeA/OVckWFybKqg/s1600/DSC01317.JPG
+image: https://loremflickr.com/400/400/lake,tech,clouds,game
 ---
 Let's kick this blog off with a quick code snippet.
 
