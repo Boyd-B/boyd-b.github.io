@@ -11,7 +11,7 @@ image: https://picsum.photos/400/400/?rnd=228
 
 Let's kick this blog off with a quick code snippet.
 
-{% highlight cs linenos %}
+{% highlight c# linenos %}
 
         public static string UpdateQueryStringParameters(this string url, Dictionary<string, string> parameters)
         {
@@ -39,7 +39,7 @@ the value. Just keep adding new query string parameters.
 
 Yes, this was a real requirement.
 
-{% highlight cs linenos %}
+{% highlight c# linenos %}
 
         private static UriBuilder MoveQueryArgToFragment(this UriBuilder ub, string argName)
         {
