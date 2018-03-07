@@ -34,37 +34,38 @@ What ties everything together is the name of the component you choose. This name
 
 @model Sitecore.XA.Foundation.Variants.Abstractions.Models.VariantsRenderingModel
 @{
-    Item dataSource = Model.DataSourceItem ?? Model.PageItem;
+  Item dataSource = Model.DataSourceItem ?? Model.PageItem;
 }
 @if (dataSource != null || Html.Sxa().IsEdit)
 {
-    <div @Html.Sxa().Component(Model.Rendering.Name.ToLower().Replace(" ", "-"), Model.Attributes)>
-        @if (dataSource == null)
-        {
-            @Model.MessageIsEmpty
-        }
-        else
-        {
-            foreach (BaseVariantField variantField in Model.VariantFields)
-            {
-                @Html.RenderingVariants().RenderVariant(variantField, dataSource, Model.RenderingWebEditingParams)
-            }
-        }
-    </div>
+  <div @Html.Sxa().Component(Model.Rendering.Name.ToLower().Replace(" ", "-"), Model.Attributes)>
+    @if (dataSource == null)
+    {
+      @Model.MessageIsEmpty
+    }
+    else
+    {
+      foreach (BaseVariantField variantField in Model.VariantFields)
+      {
+        @Html.RenderingVariants().RenderVariant(variantField, dataSource, Model.RenderingWebEditingParams)
+      }
+    }
+  </div>
 }
 {% endhighlight %}
 
 This creates a simple html structure where the css class of the wrapper is the rendering name.
 
 {% highlight html %}
-	<div class="call-to-action">
-		<div class="content">
-			<div class="title">Title</div>
-			<div class="text">
-				<p>What you see is what you get</p>
-			</div>
-		</div>
-	</div>
+<div class="call-to-action">
+  <div class="content">
+    <div class="title">Title</div>
+      <div class="text">
+        <p>What you see is what you get</p>
+	  </div>
+    </div>
+  </div>
+</div>
 {% endhighlight %}
 
 ### Matching Sass and JS
@@ -72,11 +73,11 @@ This creates a simple html structure where the css class of the wrapper is the r
 This is tied to css styles and js using this name. 
 
 {% highlight scss %}
-	.call-to-action{
-		.title{
-			font-size: 3rem;
-		}
-	}
+.call-to-action{
+  .title{
+    font-size: 3rem;
+  }
+}
 {% endhighlight %}
 
 ### Update Sitecore Templates
@@ -89,7 +90,7 @@ At this point you can add the component folder to your renderings. Then when you
 
 ### Up next
 
-Creating piplines and updating SXA items to look in the right locations.
+Creating pipelines and updating SXA items to look in the right locations.
 
 Part 1 only creates a component. The next parts of this series will discuss how to bring the components into the presentation item of your site so that you can manage all of your components (renderings), variants and styles in one place.
 
