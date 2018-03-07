@@ -14,10 +14,10 @@ We took this further by automating the creation of sass and js files for the com
 
 There are several steps to completing our task. The first of which is to turn sitecore's variants into components. The next parts of this series will explore the pipelines we created to help automate the creation of components and then finally into the modal dialogs to further streamline the creation of matching sass and js files.
 
-Part 1: Turning variants into components
-Part 2: Adding pipelines and updating sitecore items.
-Part 3: Adding Modal Dialog wizards
-Part 4: Ideas for improvement
+* Part 1: Turning variants into components
+* Part 2: Adding pipelines and updating sitecore items.
+* Part 3: Adding Modal Dialog wizards
+* Part 4: Ideas for improvement
 
 ## How it all ties together
 
