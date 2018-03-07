@@ -3,7 +3,7 @@ layout: post
 title:  "Sitecore Powershell Dialogs"
 date:   2018-3-9 11:57
 categories: Sitecore Powershell
-image: https://picsum.photos/400/400/?rnd={{ 'now' | date: "%MMdd" }}
+image: https://picsum.photos/400/400/?rnd=0309
 ---
 
 Have you tried to create a speak dialog for sitecore and failed? Or perhaps it took more time than you had available. Perhaps you just quit, sobbing in frustration. Why can't it just be easy? Oh, anyone who has successfully made one before may say it's not so bad once you get to know it, but that learning curve is like climbing a cliff. Without a safety line. If you fail, you're starting over from scratch.
