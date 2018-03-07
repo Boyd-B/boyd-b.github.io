@@ -60,10 +60,9 @@ This creates a simple html structure where the css class of the wrapper is the r
 <div class="call-to-action">
   <div class="content">
     <div class="title">Title</div>
-      <div class="text">
-        <p>What you see is what you get</p>
-	  </div>
-    </div>
+    <div class="text">
+      <p>What you see is what you get</p>
+	</div>
   </div>
 </div>
 {% endhighlight %}
