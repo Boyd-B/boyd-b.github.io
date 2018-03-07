@@ -10,16 +10,17 @@ Our sitecore hackathon project attempted to streamline the content editor proces
 
 We took this further by automating the creation of sass and js files for the component. We created a modal dialog to walk the editor through creating a new component, which would essentially use a branch to create a controller rendering pointing to our new component controller as well as the variant definition and styles item. We also created 2 modal dialogs to create a shortcut to create a js file and sass file based on the name of the rendering. We intended to bridge the create component into creating the js and scss files as extra optional steps, but ran out of time. We intend to keep working and polish off the dialogs the way we intended as we plan to use these in the future.
 
-### Series
+### Streamline SXA Series
 
 There are several steps to completing our task. The first of which is to turn sitecore's variants into components. The next parts of this series will explore the pipelines we created to help automate the creation of components and then finally into the modal dialogs to further streamline the creation of matching sass and js files.
 
 * Part 1: Turning variants into components
-* Part 2: Adding pipelines and updating sitecore items.
+* Part 2: Adding pipelines to change components location
 * Part 3: Adding Modal Dialog wizards
 * Part 4: Ideas for improvement
 
-## How it all ties together
+
+## Part 1: Turning variants into components
 
 What ties everything together is the name of the component you choose. This name is used with every other item. If you look at the razor code for the promo that comes standard with SXA you'll see it is fairly simplistic. However, they have hardcoded the name into the razor file as well as in the css classes. We simply changed the hardcoded value to the rendering name. The rest falls into place.
 
