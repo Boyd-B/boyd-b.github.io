@@ -3,7 +3,7 @@ layout: post
 title:  "Turning Sitecore's Variants into Components | Streamline SXA | Part 1"
 date:   2018-3-7 11:57
 categories: Sitecore SXA
-image: https://picsum.photos/400/400/?rnd=31
+image: https://picsum.photos/400/400/?rnd={{ 'now' | date: "%MMdd" }}
 ---
 
 Our sitecore hackathon project attempted to streamline the content editor process of creating a new variant. What we put together was a series of updates to create a single item to organize variant renderings, their variant definitions and their styles. We used the name Components to represent Component based design and development. You can find our work on our [Digital Brewery GitHub Repository](https://github.com/Boyd-B/2018-Digital-Brewery).
