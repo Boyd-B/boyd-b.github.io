@@ -32,7 +32,7 @@ This is actually a branch that also creates the variants and styles items under 
 
 ![Components](/images/streamline/Component-Tree-Structure.png)
 
-### Update Available Renderings to look in teh right spot
+### Update Available Renderings to look in the right spot
 
 Available renderings is set by default to layouts. We need to change the renderings property to look in another place.
 
