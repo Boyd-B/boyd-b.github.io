@@ -32,6 +32,22 @@ This is actually a branch that also creates the variants and styles items under 
 
 ![Components](/images/streamline/Component-Tree-Structure.png)
 
+### Update Available Renderings to look in teh right spot
+
+Available renderings is set by default to layouts. We need to change the renderings property to look in another place.
+
+{% highlight %}
+/sitecore/templates/Foundation/Experience Accelerator/Presentation/Available Renderings/_Renderings List/Data/Renderings
+{% endhighlight %}
+
+To make it specifically for components, use the following
+{% highlight %}
+query:./ancestor-or-self::*[@@templatename='Presentation']/Components
+{% endhighlight %}
+
+Otherwise to select from bot hrenderings and components you'll need to remove the source altogether and drill down from the root of teh tree. 
+In the fourth part of this series we'll identify this as one of the areas for improvement. We'd like to choose from both locations, but ideally we'd like to move the components into the renderings section with variants and styles under it there. We initially tried this route but I can't recall the issue we ran into that prevented us from sticking with it. So I'd like to revisit it in the future if possible, or if someone can do it for me and tell me, even better!
+
 ### Add pipelines to find variants and styles under component
 Now that we've moved our variants and styles we need update the pipeline to also look for variants and styles under our new component. This doesn't override any previous functionality so any variants or styles will show up in the current location.
 
