@@ -28,7 +28,9 @@ To streamline this process we moved the rendering from layouts into the presenta
 In the presentation folder we now have an item called 'Components' and within it, you create an 'Item Component'. Which is just controller rendering pointing to ComponentsController and the Item Action. 
 
 This is actually a branch that also creates the variants and styles items under it matching the name you give the rendering. This is our final tree structure.
-![Components](/images/streamline/Component-Tree-Structure.png)
+<br/>
+
+![Components](/images/streamline/Component-Tree-Structure.png){width: initial;}
 
 ### Add pipelines to find variants and styles under component
 Now that we've moved our variants and styles we need update the pipeline to also look for variants and styles under our new component. This doesn't override any previous functionality so any variants or styles will show up in the current location.
