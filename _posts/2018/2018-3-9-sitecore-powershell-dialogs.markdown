@@ -75,19 +75,23 @@ Hit the play button and see your dialog. The value of your selection goes into a
 Now that we have a dialog, let's change the options to something useful by adding a sitecore query and setting the dropdown to some item ids.
 
 {% highlight powershell %}
+
 $options = @{}
 $themes = Get-Item master: -Query "/sitecore/Media Library/Themes//*[@@templatename='Theme']"
 $themes | ForEach-Object {
   Write-Host "Item name: " + $_.Name + $_.ID
   $options.Add($_.Name, $_.ID)
 }
+
 {% endhighlight %}
 
 I originally created this as a theme selector for SXA so that's what you see in the query. Update the query to anything you desire at this point to get a list of items. Add the name and id to the options object and pass it along to the same dialog we created and you'll have a dropdown with friendly item names with the underlying sitecore id as the value.
 
 Access the item with the following:
-[% highlight powershell %}
+{% highlight powershell %}
+
 $theme = Get-Item $selectedOption
+
 {% endhighlight %}
 
 Now you have the item the user has selected. Now it's time to do some actions. You can create items, delete items, move items, even get statistics. You can upload files, download files and edit file blobs. You can edit item fields and create reports. You can basically do anything you could with c# code, but right in the content editor itself.
