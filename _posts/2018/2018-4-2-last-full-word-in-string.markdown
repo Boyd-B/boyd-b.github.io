@@ -23,4 +23,6 @@ public static string UpToLastFullWord(this string str, int maxLength)
 
 First we take the substring of the largest amount. Which is either the max length as specified or the full text. Then we just look for the last stop character available. Typically a space, but it could also be a period, comma or parenthesis. Colons and semi-colons and many other punctuation marks can also be considered a stop character, although this does example not contain a complete list. Update as you feel necessary!
 
+[Example](http://rextester.com/GVTRZ24606)
+
 **Cheers!**
